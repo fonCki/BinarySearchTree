@@ -2,13 +2,11 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
 
 
     public boolean insert(T element) {
-        if (getRoot() == null) {
-            setRoot(new BinarySearchTreeNode<T>(element));
-            incrementSize();
-            return true;
-        } else {
+        if (getRoot() != null)
             return insert(getRoot(), element);
-        }
+        setRoot(new BinarySearchTreeNode<T>(element));
+        incrementSize();
+        return true;
     }
 
     private boolean insert(BinaryTreeNode<T> node, T element) {
@@ -31,5 +29,9 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
                 return insert(node.getRightChild(), element);
             }
         }
+    }
+
+    public boolean removeElement(T Element) {
+        return true;
     }
 }

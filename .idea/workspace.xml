@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="added assignment">
-      <change afterPath="$PROJECT_DIR$/src/BinarySearchTreeNode.java" afterDir="false" />
+    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="Add nodes to the tree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665494660679</updated>
-      <workItem from="1665494663087" duration="6189000" />
+      <workItem from="1665494663087" duration="7386000" />
     </task>
     <task id="LOCAL-00001" summary="added assignment">
       <created>1665498989746</created>
@@ -84,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665498989746</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add nodes to the tree">
+      <created>1665501669939</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665501669939</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +108,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added assignment" />
+    <MESSAGE value="Add nodes to the tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add nodes to the tree" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>7</line>
+          <properties class="Main" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
