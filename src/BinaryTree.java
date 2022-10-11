@@ -25,6 +25,14 @@ public class BinaryTree<T> {
         return size;
     }
 
+    public void incrementSize() {
+        size++;
+    }
+
+    public void decrementSize() {
+        size--;
+    }
+
     public boolean contains(T element) {
         return contains(root, element);
     }
