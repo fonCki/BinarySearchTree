@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class BinarySearchTree {
+public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T>{
 }
