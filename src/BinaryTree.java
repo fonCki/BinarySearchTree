@@ -42,10 +42,13 @@ public class BinaryTree<T> {
     }
 
     private boolean contains(BinaryTreeNode<T> node, T element) {
-
-        return (root == null) ? false : root.getElement().equals(element) ||
-                                        contains(root.getLeftChild(), element) ||
-                                        contains(root.getRightChild(), element);
+        if (node == null)
+            return false;
+        if (element.equals(node.getElement())) {
+            return true;
+        } else {
+            return contains(node.getLeftChild(), element) || contains(node.getRightChild(), element);
+        }
     }
 
     public ArrayList<T> inOrder() {

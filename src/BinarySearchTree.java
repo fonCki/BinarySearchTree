@@ -57,6 +57,28 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
     }
 
 
+
+    @Override
+    public boolean contains(T element) {
+        return contains(getRoot(), element);
+    }
+
+    private boolean contains(BinaryTreeNode<T> node, T element) {
+        if (node == null)
+            return false;
+        if (element.equals(node.getElement())) {
+            return true;
+        } else {
+            if (node.getElement().compareTo(element) > 0) {
+                return contains(node.getLeftChild(), element);
+            } else {
+                return contains(node.getRightChild(), element);
+            }
+
+        }
+
+    }
+
     public void rebalance() {
         ArrayList<T> list = inOrder();
         reset();
