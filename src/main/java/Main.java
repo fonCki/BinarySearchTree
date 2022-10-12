@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         BinarySearchTree<Integer> tree = new BinarySearchTree<Integer>();
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 50; i++) {
             tree.insert(new Random().nextInt(999));
         }
 
@@ -19,8 +19,17 @@ public class Main {
         ArrayList<Integer> list = tree.inOrder();
 
         for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+            System.out.print(list.get(i) + " - ");
         }
+        System.out.println();
+
+         list = tree.preOrder();
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " - ");
+        }
+        System.out.println();
+
 
         new BinaryTreePrint().printTree(tree.getRoot());
 
@@ -44,6 +53,8 @@ public class Main {
         System.out.println("total height is " + tree.height());
 
         System.out.println("total height is " + tree.height());
+
+
 
 
 

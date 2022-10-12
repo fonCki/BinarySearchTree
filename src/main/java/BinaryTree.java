@@ -69,7 +69,23 @@ public class BinaryTree<T> {
             inOrder(node.getRightChild(), list);
         }
     }
-     public int height() {
+
+    public ArrayList<T> preOrder() {
+        ArrayList<T> list = new ArrayList<T>();
+        preOrder(root, list);
+        return list;
+    }
+
+    private void preOrder(BinaryTreeNode<T> node, ArrayList<T> list) {
+        if (node != null) {
+            list.add(node.getElement());
+            preOrder(node.getLeftChild(), list);
+            preOrder(node.getRightChild(), list);
+        }
+    }
+
+
+    public int height() {
         if (height != -1)
             return height; //saved in a cache
 

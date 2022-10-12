@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="add Junit test">
+    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="Height using cache! cool solution added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -132,7 +132,7 @@
       <updated>1665494660679</updated>
       <workItem from="1665494663087" duration="18291000" />
       <workItem from="1665581483755" duration="719000" />
-      <workItem from="1665582222472" duration="3564000" />
+      <workItem from="1665582222472" duration="4485000" />
     </task>
     <task id="LOCAL-00001" summary="added assignment">
       <created>1665498989746</created>
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665584236260</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Height using cache! cool solution added">
+      <created>1665586293527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665586293527</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,14 +207,15 @@
     <MESSAGE value="min and max value" />
     <MESSAGE value="Contains override" />
     <MESSAGE value="add Junit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Junit test" />
+    <MESSAGE value="Height using cache! cool solution added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Height using cache! cool solution added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/BinaryTree.java</url>
-          <line>47</line>
+          <line>48</line>
           <properties class="BinaryTree" method="contains">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
