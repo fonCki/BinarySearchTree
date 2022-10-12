@@ -9,6 +9,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             return insert(getRoot(), element);
         setRoot(new BinarySearchTreeNode<T>(element));
         incrementSize();
+        heightHasChanged();
         return true;
     }
 
@@ -19,6 +20,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             if (node.getLeftChild() == null) {
                 node.addLeftChild(new BinarySearchTreeNode<T>(element));
                 incrementSize();
+                heightHasChanged();
                 return true;
             } else {
                 return insert(node.getLeftChild(), element);
@@ -27,6 +29,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             if (node.getRightChild() == null) {
                 node.addRightChild(new BinarySearchTreeNode<T>(element));
                 incrementSize();
+                heightHasChanged();
                 return true;
             } else {
                 return insert(node.getRightChild(), element);
@@ -52,9 +55,8 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
     }
 
 
-
-
-    public boolean contains2(T element) {
+    @Override
+    public boolean contains(T element) {
         return contains(getRoot(), element);
     }
 

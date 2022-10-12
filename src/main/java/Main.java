@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         BinarySearchTree<Integer> tree = new BinarySearchTree<Integer>();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1; i++) {
             tree.insert(new Random().nextInt(999));
         }
 
@@ -24,9 +24,9 @@ public class Main {
 
         new BinaryTreePrint().printTree(tree.getRoot());
 
-        tree.rebalance();
+//        tree.rebalance();
 
-        new BinaryTreePrint().printTree(tree.getRoot());
+//        new BinaryTreePrint().printTree(tree.getRoot());
 //
         System.out.println(" \nminimum is: " + tree.findMin());
 //
@@ -40,6 +40,10 @@ public class Main {
 
         long duration = (endTime - startTime);
         System.out.println("takes a total of " + duration);
+
+        System.out.println("total height is " + tree.height());
+
+        System.out.println("total height is " + tree.height());
 
 
 

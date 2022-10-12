@@ -2,11 +2,14 @@ import java.util.ArrayList;
 
 public class BinaryTree<T> {
     private BinaryTreeNode<T> root;
+
+    private int height;
     private int size;
 
     public BinaryTree() {
         root = null;
         size = 0;
+        height = -1;
     }
 
     public BinaryTreeNode<T> getRoot() {
@@ -28,7 +31,9 @@ public class BinaryTree<T> {
     public void reset() {
         root = null;
         size = 0;
+        height = -1;
     }
+
     public void incrementSize() {
         size++;
     }
@@ -63,6 +68,24 @@ public class BinaryTree<T> {
             list.add(node.getElement());
             inOrder(node.getRightChild(), list);
         }
+    }
+     public int height() {
+        if (height != -1)
+            return height; //saved in a cache
+
+        return height(root, -1); //Calculate new height
+     }
+
+    private int height(BinaryTreeNode node, int h) {
+        if (node == null) {
+            return h;
+        } else {
+            return Math.max(height(node.getLeftChild(), h +1), height(node.getRightChild(), h +1));
+        }
+    }
+
+    public void heightHasChanged() {
+        height = -1;
     }
 
 }
