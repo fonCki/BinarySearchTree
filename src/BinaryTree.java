@@ -25,6 +25,10 @@ public class BinaryTree<T> {
         return size;
     }
 
+    public void reset() {
+        root = null;
+        size = 0;
+    }
     public void incrementSize() {
         size++;
     }
