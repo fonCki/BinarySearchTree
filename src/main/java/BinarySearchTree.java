@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
@@ -35,10 +36,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
 
 
     public T findMin() {
-        if (getRoot() != null) {
-            return findMin(getRoot());
-        }
-        return null;
+        return getRoot() == null ? null : findMin(getRoot());
     }
 
     private T findMin(BinaryTreeNode<T> node) {
@@ -46,10 +44,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
     }
 
     public T findMax() {
-        if (getRoot() != null) {
-            return findMax(getRoot());
-        }
-        return null;
+            return getRoot() == null ? null : findMax(getRoot());
     }
 
     private T findMax(BinaryTreeNode<T> node) {
@@ -58,8 +53,8 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
 
 
 
-    @Override
-    public boolean contains(T element) {
+
+    public boolean contains2(T element) {
         return contains(getRoot(), element);
     }
 
@@ -93,4 +88,5 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             rebalance(list, mid + 1, end);
         }
     }
+
 }
