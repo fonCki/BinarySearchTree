@@ -114,6 +114,25 @@ public class BinaryTree<T> {
         }
     }
 
+    public ArrayList<T> levelOrder() {
+        ArrayList<T> list = new ArrayList<T>();
+        for (int i = 0; i <= height(); i++) {
+            levelOrder(root, i, list);
+        }
+        return list;
+    }
+
+    private void levelOrder(BinaryTreeNode<T> node, int level, ArrayList<T> list) {
+        if (node != null) {
+            if (level == 0) {
+                list.add(node.getElement());
+            } else {
+                levelOrder(node.getLeftChild(), level - 1, list);
+                levelOrder(node.getRightChild(), level - 1, list);
+            }
+        }
+    }
+
     public void heightHasChanged() {
         height = -1;
     }
