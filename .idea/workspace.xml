@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="Height using cache! cool solution added">
+    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="preorder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -132,7 +132,7 @@
       <updated>1665494660679</updated>
       <workItem from="1665494663087" duration="18291000" />
       <workItem from="1665581483755" duration="719000" />
-      <workItem from="1665582222472" duration="4485000" />
+      <workItem from="1665582222472" duration="5799000" />
     </task>
     <task id="LOCAL-00001" summary="added assignment">
       <created>1665498989746</created>
@@ -183,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665586293527</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="preorder">
+      <created>1665587072259</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665587072259</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +215,8 @@
     <MESSAGE value="Contains override" />
     <MESSAGE value="add Junit test" />
     <MESSAGE value="Height using cache! cool solution added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Height using cache! cool solution added" />
+    <MESSAGE value="preorder" />
+    <option name="LAST_COMMIT_MESSAGE" value="preorder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

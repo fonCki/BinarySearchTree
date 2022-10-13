@@ -84,6 +84,20 @@ public class BinaryTree<T> {
         }
     }
 
+    public ArrayList<T> postOrder() {
+        ArrayList<T> list = new ArrayList<T>();
+        postOrder(root, list);
+        return list;
+    }
+
+    private void postOrder(BinaryTreeNode<T> node, ArrayList<T> list) {
+        if (node != null) {
+            postOrder(node.getLeftChild(), list);
+            postOrder(node.getRightChild(), list);
+            list.add(node.getElement());
+        }
+    }
+
 
     public int height() {
         if (height != -1)

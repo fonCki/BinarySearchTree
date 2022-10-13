@@ -30,6 +30,13 @@ public class Main {
         }
         System.out.println();
 
+        list = tree.postOrder();
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " - ");
+        }
+        System.out.println();
+
 
         new BinaryTreePrint().printTree(tree.getRoot());
 
