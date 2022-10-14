@@ -4,15 +4,50 @@ import java.util.Random;
 
 public class Main {
 
+    private static BinarySearchTree<Integer> tree;
     public static void main(String[] args) {
-        BinarySearchTree<Integer> tree = new BinarySearchTree<Integer>();
 
-        for (int i = 0; i < 50; i++) {
-            tree.insert(new Random().nextInt(999));
-        }
+        tree = new BinarySearchTree<Integer>();
 
+//        for (int i = 0; i < 50; i++) {
+//            tree.insert(new Random().nextInt(99));
+//        }
+//
+//        doTHings();
+//
+//        tree.rebalance();
+//
+//        doTHings();
+//
+//        tree.removeElement(59);
+//
+//        doTHings();
+
+//        tree.insert(5);
+        tree.insert(10);
+
+        tree.insert(5);
+//        tree.insert(4);
+        tree.insert(7);
+        tree.insert(8);
+
+        new BinaryTreePrint().printTree(tree.getRoot());
+
+        System.out.println();
+
+        System.out.println(tree.inOrder());
+
+        tree.removeElement(7);
+
+        System.out.println(tree.inOrder());
+
+        System.out.println("size is: " + tree.size());
+
+        new BinaryTreePrint().printTree(tree.getRoot());
+    }
+
+    static void doTHings() {
         System.out.println("size equals" + tree.size());
-
 
 
 //
@@ -23,7 +58,7 @@ public class Main {
         }
         System.out.println();
 
-         list = tree.preOrder();
+        list = tree.preOrder();
 
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + " - ");
@@ -66,11 +101,9 @@ public class Main {
 
         System.out.println("total height is " + tree.height());
 
-        System.out.println("total height is " + tree.height());
+        System.out.println("Exist: " + tree.contains(50));
 
 
-
-
-
+        System.out.println("***********************************************");
     }
 }
