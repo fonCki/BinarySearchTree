@@ -58,6 +58,11 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
                 return true;
             }
             //TODO
+            T min = findMin((BinaryTreeNode<T>)getRoot().getRightChild());
+            BinaryTreeNode<T> replacement = getNode(getRoot().getRightChild(), min);
+            removeElement(replacement.getElement());
+            getRoot().setElement(replacement.getElement());
+            return true;
             //root has two children
         }
         return removeElement(getParent(getRoot(), element), element); //if is not the root
@@ -67,10 +72,10 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
         if (parent == null)
             return null;
         if ((parent.getLeftChild() != null) && ((T)parent.getLeftChild().getElement()).compareTo(element) == 0) {
-            return parent;
+                return parent;
         }
-        if ((parent.getRightChild() != null) && ((T)parent.getLeftChild().getElement()).compareTo(element) == 0) {
-            return parent;
+        if ((parent.getRightChild() != null) && ((T)parent.getRightChild().getElement()).compareTo(element) == 0) {
+                return parent;
         }
         if (parent.getElement().compareTo(element) > 0) {
             return getParent(parent.getLeftChild(), element);
@@ -123,6 +128,11 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
         }
         //TODO
         //child has two children
+
+        T min = findMin((BinaryTreeNode<T>)child.getRightChild());
+        BinaryTreeNode<T> replacement = getNode(child.getRightChild(), min);
+        removeElement(replacement.getElement());
+        child.setElement(replacement.getElement());
         return true;
     }
 

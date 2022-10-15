@@ -24,12 +24,19 @@ public class Main {
 //        doTHings();
 
 //        tree.insert(5);
-        tree.insert(10);
+        tree.insert(20);
 
         tree.insert(5);
 //        tree.insert(4);
         tree.insert(7);
+        tree.insert(9);
         tree.insert(8);
+        tree.insert(6);
+        tree.insert(16);
+        tree.insert(13);
+        tree.insert(23);
+        tree.insert(21);
+        tree.insert(22);
 
         new BinaryTreePrint().printTree(tree.getRoot());
 

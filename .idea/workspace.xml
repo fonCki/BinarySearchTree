@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="level order done">
+    <list default="true" id="3a088e14-8d4f-4e99-bf0f-95d77c6b3380" name="Changes" comment="deleting elements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BinaryTreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +132,7 @@
       <updated>1665494660679</updated>
       <workItem from="1665494663087" duration="18291000" />
       <workItem from="1665581483755" duration="719000" />
-      <workItem from="1665582222472" duration="24747000" />
+      <workItem from="1665582222472" duration="88589000" />
     </task>
     <task id="LOCAL-00001" summary="added assignment">
       <created>1665498989746</created>
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665631009841</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="deleting elements">
+      <created>1665748392328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665748392328</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +239,8 @@
     <MESSAGE value="preorder" />
     <MESSAGE value="postOrder" />
     <MESSAGE value="level order done" />
-    <option name="LAST_COMMIT_MESSAGE" value="level order done" />
+    <MESSAGE value="deleting elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleting elements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -254,7 +261,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>39</line>
+          <line>45</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
