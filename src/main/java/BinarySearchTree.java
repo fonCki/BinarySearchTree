@@ -57,13 +57,13 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
                 heightHasChanged();
                 return true;
             }
-            //TODO
+            //root has two children
             T min = findMin((BinaryTreeNode<T>)getRoot().getRightChild());
             BinaryTreeNode<T> replacement = getNode(getRoot().getRightChild(), min);
             removeElement(replacement.getElement());
             getRoot().setElement(replacement.getElement());
             return true;
-            //root has two children
+
         }
         return removeElement(getParent(getRoot(), element), element); //if is not the root
     }
@@ -126,9 +126,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             heightHasChanged();
             return true;
         }
-        //TODO
         //child has two children
-
         T min = findMin((BinaryTreeNode<T>)child.getRightChild());
         BinaryTreeNode<T> replacement = getNode(child.getRightChild(), min);
         removeElement(replacement.getElement());
