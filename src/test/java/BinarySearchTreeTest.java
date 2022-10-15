@@ -82,76 +82,108 @@ class BinarySearchTreeTest {
     }
 
     @Test
-    void getRoot() {
-        //Testing the root of the integer tree and string tree
-        assertEquals(75, integerTree.getRoot().getElement());
-        assertEquals("China", stringTree.getRoot().getElement());
-    }
-
-
-    @Test
-    void isEmpty() {
-        //Testing the isEmpty method of the integer tree and string tree
-        assertFalse(integerTree.isEmpty());
-        assertFalse(stringTree.isEmpty());
-
-        //Testing the isEmpty method of the integer tree and string tree after clear
-        integerTree.reset();
-        stringTree.reset();
-        assertTrue(integerTree.isEmpty());
-    }
-
-    @Test
-    void size() {
-        //Testing the size method of the integer tree and string tree
-        assertEquals(31, integerTree.size());
-        assertEquals(31, stringTree.size());
-
-    }
-
-    @Test
-    void reset() {
-        //Testing the reset method of the integer tree and string tree
-        integerTree.insert(85);
-        integerTree.reset();
-        stringTree.reset();
-        assertTrue(integerTree.isEmpty());
-        assertTrue(stringTree.isEmpty());
-    }
-
-    @Test
-    void incrementSize() {
-    }
-
-    @Test
-    void decrementSize() {
-    }
-
-    @Test
-    void contains() {
-    }
-
-    @Test
-    void inOrder() {
-    }
-
-    @Test
     void insert() {
+        //insert 3 new integers to the integer tree
+        integerTree.insert(100);
+        integerTree.insert(200);
+        integerTree.insert(300);
+
+        //check if the new integers are inserted correctly
+        assertTrue(integerTree.contains(100));
+        assertTrue(integerTree.contains(200));
+        assertTrue(integerTree.contains(300));
+        assertEquals(34, integerTree.size());
+
+        //insert 3 repeated strings to the string tree
+        stringTree.insert("China");
+        stringTree.insert("India");
+        stringTree.insert("United States");
+        assertEquals(31, stringTree.size());
     }
 
+    @Test
+    void removeElement() {
+        //remove 3 integers from the integer tree
+        integerTree.removeElement(75);
+        integerTree.removeElement(50);
+        integerTree.removeElement(12);
+
+        //check if the integers are removed correctly
+        assertFalse(integerTree.contains(75));
+        assertFalse(integerTree.contains(50));
+        assertFalse(integerTree.contains(12));
+        assertEquals(27, integerTree.size());
+
+        //remove 3 strings from the string tree
+        stringTree.removeElement("China");
+        stringTree.removeElement("India");
+        stringTree.removeElement("United States");
+        assertEquals(27, stringTree.size());
+
+        //remove a leaf node in the string tree
+        stringTree.removeElement("Argentina");
+        assertEquals(26, stringTree.size());
+
+        //remove a node with one child in the string tree
+        stringTree.removeElement("France");
+        assertEquals(25, stringTree.size());
+
+        //remove a node with two children in the string tree
+        stringTree.removeElement("Ethiopia");
+        assertEquals(24, stringTree.size());
+
+        //remove the root node in the string tree
+        stringTree.removeElement("Bangladesh");
+        assertEquals(23, stringTree.size());
+    }
     @Test
     void findMin() {
+        //find the minimum integer in the integer tree
+        assertEquals(3, integerTree.findMin());
+
+        //find the minimum string in the string tree
+        assertEquals("Argentina", stringTree.findMin());
     }
 
     @Test
     void findMax() {
+        //find the maximum integer in the integer tree
+        assertEquals(99, integerTree.findMax());
+
+        //find the maximum string in the string tree
+        assertEquals("Vietnam", stringTree.findMax());
     }
 
     @Test
-    void contains2() {
+    void contains() {
+        //check if the integer tree contains 3 integers
+        assertTrue(integerTree.contains(75));
+        assertTrue(integerTree.contains(50));
+        assertTrue(integerTree.contains(12));
+
+        //check if the string tree contains 3 strings
+        assertTrue(stringTree.contains("China"));
+        assertTrue(stringTree.contains("India"));
+        assertTrue(stringTree.contains("United States"));
     }
 
     @Test
     void rebalance() {
+        //If there are n nodes in a binary search tree, maximum height of the binary search tree is n-1,
+        // and minimum height is ceil(log2(n+1))-1.
+        //So the height of the integer tree is 31, and the height of the string tree is 30.
+        assertEquals(6, integerTree.height());
+        assertEquals(11, stringTree.height());
+
+        //rebalance the integer tree
+        integerTree.rebalance();
+        int estimatedHeight = (int) Math.ceil(Math.log(integerTree.size() + 1) / Math.log(2)) - 1;
+        assertEquals(estimatedHeight, integerTree.height());
+
+        //rebalance the string tree
+        stringTree.rebalance();
+        estimatedHeight = (int) Math.ceil(Math.log(stringTree.size() + 1) / Math.log(2)) - 1;
+        assertEquals(estimatedHeight, stringTree.height());
+
     }
 }

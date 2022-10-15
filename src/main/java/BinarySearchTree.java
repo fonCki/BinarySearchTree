@@ -9,7 +9,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             return insert(getRoot(), element);
         setRoot(new BinarySearchTreeNode<T>(element));
         incrementSize();
-        heightHasChanged();
         return true;
     }
 
@@ -20,7 +19,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             if (node.getLeftChild() == null) {
                 node.addLeftChild(new BinarySearchTreeNode<T>(element));
                 incrementSize();
-                heightHasChanged();
                 return true;
             } else {
                 return insert(node.getLeftChild(), element);
@@ -29,7 +27,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             if (node.getRightChild() == null) {
                 node.addRightChild(new BinarySearchTreeNode<T>(element));
                 incrementSize();
-                heightHasChanged();
                 return true;
             } else {
                 return insert(node.getRightChild(), element);
@@ -48,13 +45,11 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             if (getRoot().getRightChild() == null) { //root has only left child
                 setRoot(getRoot().getLeftChild());
                 decrementSize();
-                heightHasChanged();
                 return true;
             }
             if (getRoot().getLeftChild() == null) { //root has only right child
                 setRoot(getRoot().getRightChild());
                 decrementSize();
-                heightHasChanged();
                 return true;
             }
             //root has two children
@@ -62,6 +57,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
             BinaryTreeNode<T> replacement = getNode(getRoot().getRightChild(), min);
             removeElement(replacement.getElement());
             getRoot().setElement(replacement.getElement());
+            decrementSize();
             return true;
 
         }
@@ -71,10 +67,8 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
     private BinaryTreeNode<T> getParent(BinaryTreeNode<T> parent, T element) {
         if (parent == null)
             return null;
-        if ((parent.getLeftChild() != null) && ((T)parent.getLeftChild().getElement()).compareTo(element) == 0) {
-                return parent;
-        }
-        if ((parent.getRightChild() != null) && ((T)parent.getRightChild().getElement()).compareTo(element) == 0) {
+        if (((parent.getLeftChild() != null) && ((T)parent.getLeftChild().getElement()).compareTo(element) == 0) ||
+            ((parent.getRightChild() != null) && ((T)parent.getRightChild().getElement()).compareTo(element) == 0)) {
                 return parent;
         }
         if (parent.getElement().compareTo(element) > 0) {
@@ -103,7 +97,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
                 parent.addRightChild(null);
             }
             decrementSize();
-            heightHasChanged();
             return true;
         }
         if (child.getLeftChild() == null) { //child has only right child
@@ -113,7 +106,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
                 parent.addRightChild(child.getRightChild());
             }
             decrementSize();
-            heightHasChanged();
             return true;
         }
         if (child.getRightChild() == null) { //child has only left child
@@ -123,7 +115,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> {
                 parent.addRightChild(child.getLeftChild());
             }
             decrementSize();
-            heightHasChanged();
             return true;
         }
         //child has two children

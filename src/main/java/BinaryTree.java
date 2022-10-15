@@ -36,10 +36,16 @@ public class BinaryTree<T> {
 
     public void incrementSize() {
         size++;
+        heightHasChangedProbablyChange();
     }
 
     public void decrementSize() {
         size--;
+        heightHasChangedProbablyChange();
+    }
+
+    private void heightHasChangedProbablyChange() {
+        height = -1;
     }
 
     public boolean contains(T element) {
@@ -99,21 +105,6 @@ public class BinaryTree<T> {
     }
 
 
-    public int height() {
-        if (height != -1)
-            return height; //saved in a cache
-
-        return height(root, -1); //Calculate new height
-     }
-
-    private int height(BinaryTreeNode node, int h) {
-        if (node == null) {
-            return h;
-        } else {
-            return Math.max(height(node.getLeftChild(), h +1), height(node.getRightChild(), h +1));
-        }
-    }
-
     public ArrayList<T> levelOrder() {
         ArrayList<T> list = new ArrayList<T>();
         for (int i = 0; i <= height(); i++) {
@@ -133,8 +124,20 @@ public class BinaryTree<T> {
         }
     }
 
-    public void heightHasChanged() {
-        height = -1;
+
+    public int height() {
+        if (height != -1)
+            return height; //saved in a cache
+
+        return height(root, -1); //Calculate new height
+    }
+
+    private int height(BinaryTreeNode node, int h) {
+        if (node == null) {
+            return h;
+        } else {
+            return Math.max(height(node.getLeftChild(), h +1), height(node.getRightChild(), h +1));
+        }
     }
 
 }
